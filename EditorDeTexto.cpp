@@ -18,7 +18,7 @@ typedef struct {
     char texto[TAM_TEXTO];
     char texto_antigo[TAM_TEXTO];
     int linha;
-    int id_grupo;//tive que adicionair um id_grupo pois o codigo estava fazendo o desfazer e o refazer ao usar a funÁ„o substituirPalavra palavra por palavra ao inves de desfazer ou refazer a aÁ„o inteira 
+    int id_grupo;
 } Historico;
 
 typedef struct {
@@ -66,7 +66,7 @@ void menu() {
     printf("3. Editar linha\n");
     printf("4. Subir\n");
     printf("5. Descer\n");
-    printf("6. Mostrar conte˙do\n");
+    printf("6. Mostrar conte√∫do\n");
     printf("7. Buscar palavra\n");
     printf("8. Substituir palavra\n");
     printf("9. Copiar linha\n");
@@ -355,7 +355,7 @@ void substituirPalavra(Editor* editor, char* palavraAlvo, char* palavraNova) {
     }
 
     if (algumaSubstituicaoFeita) {
-        printf("SubstituiÁ„o concluÌda.\n");
+        printf("Substitui√ß√£o conclu√≠da.\n");
         editor->proximo_id_grupo++;
     }
 }
@@ -541,7 +541,7 @@ int main() {
             case 0:
                 break;
             default:
-                printf("OpÁ„o inv·lida!\n");
+                printf("Op√ß√£o inv√°lida!\n");
         }
 
     } while (opcao != 0);
